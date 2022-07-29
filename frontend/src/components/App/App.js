@@ -1,31 +1,33 @@
-import './App.css';
 import React from 'react';
+import StyledApp from './StyledApp';
 
 function App() {
   return (
-    <>
+    <StyledApp>
       <header>
         <h2>Twootr</h2>
         <p>Write a new Twoot</p>
       </header>
 
-      <section>
+      <section className="user-selector">
         <div>
           <div>
-            <div>
-              <img></img>
-            </div>
-            <h2>John Doe</h2>
-            <h3>@john-doe</h3>
+            <img src="logo192.png" alt="User avatar" />
           </div>
+          <h2>John Doe</h2>
+          <h3>@john-doe</h3>
         </div>
       </section>
       
-      <section>
-        <h2> Compose Twoot </h2>
-        <textarea> What are humming about? </textarea>
-        <button> Twoot </button>
-        <span> Counter </span>
+      <section className="composer">
+        <h2>Compose Twoot</h2>
+        <textarea>What are humming about?</textarea>
+        <div class="composer-button-container">
+          <div className="composer-button">
+            <button type="button">Twoot</button>
+          </div>
+          <span>Counter</span>
+        </div>
       </section>
 
       <section>
@@ -48,9 +50,7 @@ function App() {
           </div>
         </article>
       </section>
-
-
-    </>
+    </StyledApp>
   );
 }
 
