@@ -18,21 +18,6 @@ const StyledApp = styled.div`
     }
   }
 
-  .user-selector {
-    background: lightgray;
-    display: flex;
-    justify-content: center;
-    padding: 24px;
-
-    h2, h3 {
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-  }
-
   .composer {
     padding: 32px;
 

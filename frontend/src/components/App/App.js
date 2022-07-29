@@ -1,5 +1,6 @@
 import React from 'react';
 import StyledApp from './StyledApp';
+import UserSelector from '../UserSelector/UserSelector';
 
 function App() {
   return (
@@ -9,15 +10,7 @@ function App() {
         <p>Write a new Twoot</p>
       </header>
 
-      <section className="user-selector">
-        <div>
-          <div>
-            <img src="logo192.png" alt="User avatar" />
-          </div>
-          <h2>John Doe</h2>
-          <h3>@john-doe</h3>
-        </div>
-      </section>
+      <UserSelector />
       
       <section className="composer">
         <h2>Compose Twoot</h2>
