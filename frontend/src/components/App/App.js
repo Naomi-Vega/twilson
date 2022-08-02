@@ -2,6 +2,7 @@ import React from 'react';
 import StyledApp from './StyledApp';
 import UserSelector from '../UserSelector/UserSelector';
 import UserTwoots from '../UserTwoots/UserTwoots';
+import ComposeTwoot from '../ComposeTwoot/ComposeTwoot'
 
 function App() {
   return (
@@ -13,16 +14,7 @@ function App() {
 
       <UserSelector />
       
-      <section className="composer">
-        <h2>Compose Twoot</h2>
-        <textarea>What are humming about?</textarea>
-        <div class="composer-button-container">
-          <div className="composer-button">
-            <button type="button">Twoot</button>
-          </div>
-          <span>Counter</span>
-        </div>
-      </section>
+      <ComposeTwoot />
 
      <UserTwoots />
      
