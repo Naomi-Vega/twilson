@@ -80,7 +80,12 @@ const StyledApp = styled.div`
 
   }
 
-  
+  .twoot-anchor {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export default StyledApp;
