@@ -18,29 +18,6 @@ const StyledApp = styled.div`
     }
   }
 
-  .composer {
-    padding: 32px;
-
-    textarea {
-      width: 100%;
-      border: none;
-      border-bottom: 1px solid grey;
-    }
-
-    .composer-button-container {
-      padding-top: 16px;
-      display: flex;
-
-      .composer-button, span {
-        width: 50%;
-      }
-
-      span {
-        text-align: right;
-      }
-    }
-  }
-
   article {
     border: 2px solid black;
     padding: 0px 20px;
