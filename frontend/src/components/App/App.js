@@ -2,7 +2,7 @@ import React from 'react';
 import StyledApp from './StyledApp';
 import UserSelector from '../UserSelector/UserSelector';
 import UserTwoots from '../UserTwoots/UserTwoots';
-import ComposeTwoot from '../ComposeTwoot/ComposeTwoot'
+import ComposeTwoot from '../ComposeTwoot/ComposeTwoot';
 
 function App() {
   return (

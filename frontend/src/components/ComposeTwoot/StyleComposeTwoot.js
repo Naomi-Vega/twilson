@@ -6,6 +6,7 @@ const StyledComposeTwoot = styled.section`
     textarea {
       width: 100%;
       border: none;
+      padding-top: 15px;
       border-bottom: 1px solid grey;
     }
 
@@ -19,8 +20,9 @@ const StyledComposeTwoot = styled.section`
 
       span {
         text-align: right;
+        color: gray;
       }
-    }
+    } 
 `;
 
 export default StyledComposeTwoot;
