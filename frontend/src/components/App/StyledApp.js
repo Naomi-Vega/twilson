@@ -17,6 +17,13 @@ const StyledApp = styled.div`
       text-align: right;
     }
   }
+
+  .twoot-anchor {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export default StyledApp;
