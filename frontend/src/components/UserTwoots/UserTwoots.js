@@ -1,6 +1,7 @@
 import StyledUserTwoots from './StyledUserTwoots';
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import * as Icon from 'react-bootstrap-icons';
 
 
 function UserTwoots() {
