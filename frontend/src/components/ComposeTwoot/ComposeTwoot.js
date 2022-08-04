@@ -9,7 +9,7 @@ function ComposeTwoot() {
                 <div className="composer-button">
                     <button type="button">Twoot</button>
                 </div>
-                <span class="textarea_counter">0/10</span>
+                <span class="textarea_counter">0/140</span>
             </div>
         </StyledComposeTwoot>
     );    
