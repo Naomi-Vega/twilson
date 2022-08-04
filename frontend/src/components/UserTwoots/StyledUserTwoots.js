@@ -37,7 +37,11 @@ const StyledUserTwoots = styled.section`
     }
 
     .twoot-button {
+      display: flex;
       text-align: right;
+      justify-content: flex-end;
+      gap: 8px;
+      padding-top: 16px;
     }
 
   }

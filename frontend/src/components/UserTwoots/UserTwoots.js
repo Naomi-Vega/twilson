@@ -1,13 +1,13 @@
 import StyledUserTwoots from './StyledUserTwoots';
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import * as Icon from 'react-bootstrap-icons';
+import { FlagFill, ArrowRepeat, HeartFill } from 'react-bootstrap-icons';
 
 
 function UserTwoots() {
     
     const [twoots, setTwoots] = useState([]) 
-
+ 
     useEffect(() => {
         const url='http://localhost:8080/twoots';
         axios.get(url).then((response) => {
@@ -35,9 +35,9 @@ function UserTwoots() {
                         <div class="twoot-timeframe">
                             <p>{twilson.dateAdded}</p>
                             <div class="twoot-button">
-                                <button>Flag button</button>
-                                <button>Share Button</button>
-                                <button>Like Button</button>
+                                <FlagFill color="black" size={20} />
+                                <ArrowRepeat color="black" size={20} />
+                                <HeartFill color="black" size={20} />
                             </div>
                         </div>
                     </article>
