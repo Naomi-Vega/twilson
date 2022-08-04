@@ -42,6 +42,7 @@ const StyledUserTwoots = styled.section`
       justify-content: flex-end;
       gap: 8px;
       padding-top: 16px;
+        
     }
 
   }
