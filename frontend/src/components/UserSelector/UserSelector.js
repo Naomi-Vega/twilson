@@ -1,5 +1,6 @@
-import { useState } from "react";
-import StyledUserSelector from "./StyleUserSelector";
+import { useState, useRef } from "react";
+import { PencilSquare, CheckSquareFill } from 'react-bootstrap-icons';
+import StyledUserSelector from "./StyledUserSelector";
 
 const defaultValue = {
   first: "John",
@@ -10,6 +11,8 @@ function UserSelector() {
   const [showForm, setShowForm] = useState(false);
   const [userName, setUserName] = useState(defaultValue);
   const [authorSlug, setAuthorSlug] = useState("john-doe");
+  const submitBtnRef = useRef();
+  const inputRef = useRef();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,7 +32,13 @@ function UserSelector() {
 
   const handleNewUserBtnClick = () => {
     setShowForm(true);
+    setTimeout(() => inputRef.current.focus());
   };
+
+  const handleSubmitIconClick = () => {
+    // triggers submit button click
+    submitBtnRef.current.click()
+  }
 
   return (
     <StyledUserSelector className="user-selector">
@@ -45,7 +54,7 @@ function UserSelector() {
           <p className="user-name">
             {`${userName.first} ${userName.last}`}{" "}
             <span className="new-user-btn" onClick={handleNewUserBtnClick}>
-              [Edit]
+              <PencilSquare size={20} className="edit-btn" />
             </span>
           </p>
         ) : (
@@ -56,6 +65,7 @@ function UserSelector() {
               onChange={handleInputChange}
               value={userName.first}
               required
+              ref={inputRef}
             />
             <input
               type="text"
@@ -64,7 +74,8 @@ function UserSelector() {
               value={userName.last}
               required
             />
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" style={{ display: 'none' }} ref={submitBtnRef} />
+            <CheckSquareFill size={32} onClick={handleSubmitIconClick} className="save-btn" /> 
           </form>
         )}
         <h3>@{authorSlug}</h3>

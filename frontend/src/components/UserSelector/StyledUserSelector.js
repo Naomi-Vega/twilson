@@ -13,6 +13,7 @@ const StyledUserSelector = styled.section`
   .user-name {
     font-size: 2rem;
     text-align: center;
+    margin: 0;
   }
 
   .new-user-btn {
@@ -36,6 +37,29 @@ const StyledUserSelector = styled.section`
 
   .avatar-image {
     width: 250px;
+  }
+
+  .save-btn {
+    cursor: pointer;
+    fill: #0b4f15;
+    & :hover {
+      fill: #21732d;
+    }
+  }
+
+  .edit-btn {
+    cursor: pointer;
+    fill: black;
+    &:hover {
+      fill: #4d4d4d;
+    }
+  }
+
+  input {
+    padding: 8px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
   }
 `;
 
