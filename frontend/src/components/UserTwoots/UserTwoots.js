@@ -23,7 +23,7 @@ function UserTwoots(props) {
         <StyledUserTwoots className="user-selector">
             <section>
                 {twoots.map((twilson) => {
-                    return <Twoot twilson={twilson} />
+                    return <Twoot twilson={twilson} key={twilson._id} />
                 })}
             </section>
         </StyledUserTwoots>

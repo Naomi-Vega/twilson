@@ -49,7 +49,7 @@ const ComposeTwoot = (props) => {
                         value={text}
                     />
 
-                    <div class="composer-button-container">
+                    <div className="composer-button-container">
                         <div className="composer-button">
                             <button disabled={isDisabled} className={(isDisabled || !text) ? 'disabled' : ''}>
                                 Twoot
