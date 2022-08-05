@@ -7,6 +7,13 @@ function Twoot(props){
     const [retwootColor, setRetwootColor] = useState('black');
     const [likeColor, setLikeColor] = useState('black');
 
+    function newDate(){
+        var dateNew = new Date().getTime() - new Date('2022-07-06').getTime();
+        let days = dateNew / 1000 / 60 / 60 / 24;
+        console.log(dateNew);
+    }
+        
+
     return(
         <article>
         <div class="twoot-user">
