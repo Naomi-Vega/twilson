@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import StyledComposeTwoot from './StyleComposeTwoot';
 
-const ComposeTwoot = () => {
+const ComposeTwoot = (props) => {
+    const { userName, setDataIsOutdated } = props;
     const [charsCount, setCharsCount] = useState(140);
     const [text, setText] = useState('');
     const [isDisabled, setIsDisabled] = useState(false);
@@ -11,17 +12,12 @@ const ComposeTwoot = () => {
         setText(e.target.value);
     };
 
-    const user = {
-        firstName: 'John',
-        lastName: 'Doe',
-    }
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const newTwoot = {
-            author: user.firstName + " " + user.lastName,
+            author: userName.first + " " + userName.last,
             content: text,
-            authorSlug: user.firstName.toLowerCase() + "-" + user.lastName.toLowerCase(),
+            authorSlug: userName.first.toLowerCase() + "-" + userName.last.toLowerCase(),
             dateAdded: new Date().toISOString(),
         };
 
@@ -29,6 +25,8 @@ const ComposeTwoot = () => {
             .post("http://localhost:8080/twoot", { newTwoot })
             .then((res) => {
                 setCharsCount(140);
+                setText('');
+                setDataIsOutdated(true);
             })
     };
 

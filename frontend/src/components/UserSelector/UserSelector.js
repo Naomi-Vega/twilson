@@ -2,14 +2,9 @@ import { useState, useRef } from "react";
 import { PencilSquare, CheckSquareFill } from 'react-bootstrap-icons';
 import StyledUserSelector from "./StyledUserSelector";
 
-const defaultValue = {
-  first: "John",
-  last: "Doe",
-};
-
-function UserSelector() {
+function UserSelector(props) {
+  const { userName, setUserName } = props;
   const [showForm, setShowForm] = useState(false);
-  const [userName, setUserName] = useState(defaultValue);
   const [authorSlug, setAuthorSlug] = useState("john-doe");
   const submitBtnRef = useRef();
   const inputRef = useRef();
