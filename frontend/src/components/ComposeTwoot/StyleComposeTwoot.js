@@ -24,6 +24,10 @@ const StyledComposeTwoot = styled.section`
       cursor: default;
     }
 
+    button:hover {
+      opacity: 0.9;
+    }
+
     textarea {
       width: 100%;
       border: none;
