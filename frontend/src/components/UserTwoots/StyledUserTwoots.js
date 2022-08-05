@@ -5,14 +5,19 @@ const StyledUserTwoots = styled.section`
     border: 2px solid black;
     padding: 0px 20px;
     margin: 32px;
-    box-shadow: 5px 5px grey;
-
+    &:hover {
+      box-shadow: 3px 3px grey;;
+    }
   }
 
   .twoot-user {
     display: flex;
-    padding: 10px 10px;
+    padding: 10px 0 0 0;
     
+    p {
+      padding-left: 15px;
+    }
+
     img {
       width: 60px;
       height: 50px;

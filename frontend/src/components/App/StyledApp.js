@@ -6,8 +6,9 @@ const StyledApp = styled.div`
   header {
     padding: 8px 16px;
     display: flex;
-    background: lightblue;
+    background: #83438f;
     align-content: space-between;
+    color: white;
 
     h2, p {
       width: 50%;

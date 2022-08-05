@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const StyledUserSelector = styled.section`
-  background: lightgray;
+  background: #2D2D2D;
   display: flex;
   justify-content: center;
   padding: 24px;
-
+  color: white;
   h3 {
     text-align: center;
   }
@@ -49,9 +49,9 @@ const StyledUserSelector = styled.section`
 
   .edit-btn {
     cursor: pointer;
-    fill: black;
+    fill: white;
     &:hover {
-      fill: #4d4d4d;
+      fill: #C2C2C2;
     }
   }
 
