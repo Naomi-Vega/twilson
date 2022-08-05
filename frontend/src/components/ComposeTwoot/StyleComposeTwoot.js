@@ -9,14 +9,20 @@ const StyledComposeTwoot = styled.section`
     }
 
     button {
-        background-color: #aa8caf;
-        color: white;
-        font-size: 15px;
-        border: none;
-        border-radius: 5px;
-        padding: 5px 20px;
-        text-decoration: solid; 
-      }
+      background-color: #83438f;
+      color: white;
+      font-size: 15px;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 20px;
+      text-decoration: solid;
+      cursor: pointer;
+    }
+
+    button.disabled {
+      background-color: #aa8caf;
+      cursor: default;
+    }
 
     textarea {
       width: 100%;
@@ -36,7 +42,7 @@ const StyledComposeTwoot = styled.section`
         text-align: right;
         color: gray;
       }
-    } 
+    }
 `;
 
 export default StyledComposeTwoot;

@@ -1,116 +1,68 @@
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import StyledComposeTwoot from './StyleComposeTwoot';
 
-
-
-const ComposeTwoot = (props) => {
-    const { isUpdate, setIsUpdate, user, isFocus, setIsFocus } = props;
-    const [wordCount, setWordCount] = useState(140);
+const ComposeTwoot = () => {
+    const [charsCount, setCharsCount] = useState(140);
+    const [text, setText] = useState('');
     const [isDisabled, setIsDisabled] = useState(false);
-    const textInputRef = useRef();
 
-
-    const handleCount = (e) => {
-        const length = e.target.value.length;
-        if (length > 140) {
-            alert("Exceeded the amount of characters");
-            setIsDisabled(true);
-            return;
-        }
-        isDisabled === true && setIsDisabled(false);
-        setWordCount(140 - length);
+    const handleChange = (e) => {
+        setText(e.target.value);
     };
 
-    const handleMouseLeave = () => {
-        setIsFocus(false);
-    };
+    const user = {
+        firstName: 'John',
+        lastName: 'Doe',
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (textInputRef.current.value === "") {
-            alert("Invalid input");
-            return;
-        }
-
         const newTwoot = {
             author: user.firstName + " " + user.lastName,
-            content: textInputRef.current.value,
-            authorSlug:
-                user.firstName.toLowerCase() + "-" + user.lastName.toLowerCase(),
+            content: text,
+            authorSlug: user.firstName.toLowerCase() + "-" + user.lastName.toLowerCase(),
+            dateAdded: new Date().toISOString(),
         };
 
         axios
             .post("http://localhost:8080/twoot", { newTwoot })
             .then((res) => {
-                setIsUpdate(!isUpdate);
-                textInputRef.current.value = "";
-                setWordCount(140);
-                setTimeout(() => { }, 500);
+                setCharsCount(140);
             })
-            .catch((error) => console.log(error));
     };
 
     useEffect(() => {
-        isFocus && textInputRef.current.focus();
-    }, [isFocus]);
+        const currentCount = 140 - text.length;
+        setCharsCount(currentCount);
+        setIsDisabled(currentCount < 0);
+    }, [text])
 
     return (
-        <StyledComposeTwoot onSubmit={handleSubmit} id="composeTwoot">
+        <StyledComposeTwoot id="composeTwoot">
             <section className="compose-twoot-container">
-                <h2>Compose Twoot</h2>
-                <textarea
-                    id="twootText"
-                    onChange={handleCount}
-                    onBlur={handleMouseLeave}
-                    ref={textInputRef}
-                    type="text"
-                    placeholder="What are you humming about?"
-                />
+                <form onSubmit={handleSubmit}>
+                    <h2>Compose Twoot</h2>
+                    <textarea
+                        id="twootText"
+                        onChange={handleChange}
+                        type="text"
+                        placeholder="What are you humming about?"
+                        value={text}
+                    />
 
-                <div class="composer-button-container">
-                    <div className="composer-button">
-                        <button disabled={isDisabled} className={isDisabled && "disable"}>
-                            Twoot
-                        </button>
+                    <div class="composer-button-container">
+                        <div className="composer-button">
+                            <button disabled={isDisabled} className={(isDisabled || !text) ? 'disabled' : ''}>
+                                Twoot
+                            </button>
+                        </div>
+                        <span style={{ color: isDisabled ? 'red' : 'unset' }}>{charsCount}</span>
                     </div>
-                    <span>{wordCount}</span>
-                </div>
+                </form>
             </section>
         </StyledComposeTwoot >
     );
 };
 
-
-
-
-
-
-
-
-
-/*
-
-function ComposeTwoot() {
-    return (
-        <StyledComposeTwoot className="composer">
-            <h2>Compose Twoot</h2>
-            <textarea class="compose-twoot" placeholder='What are you humming about?'></textarea>
-            <div class="composer-button-container">
-                <div className="composer-button">
-                    <button type="button">Twoot</button>
-                </div>
-                <span class="textarea_counter">0/10</span>
-            </div>
-        </StyledComposeTwoot>
-    );
-}
-
-*/
-
-
-
-
 export default ComposeTwoot;
-
-
