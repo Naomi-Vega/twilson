@@ -4,7 +4,7 @@ const StyledApp = styled.div`
   font-weight: bold;
 
   header {
-    padding: 8px 16px;
+    padding: 0 16px 0 16px;
     display: flex;
     background: #83438f;
     align-content: space-between;
@@ -12,6 +12,8 @@ const StyledApp = styled.div`
 
     h2, p {
       width: 50%;
+      font-size: 32px;
+      padding-left: 24px;
     }
 
     p {
@@ -21,6 +23,9 @@ const StyledApp = styled.div`
 
   .twoot-anchor {
     cursor: pointer;
+    padding: 20px 16px 0 0;
+    font-size: 18px;
+
     &:hover {
       text-decoration: underline;
     }

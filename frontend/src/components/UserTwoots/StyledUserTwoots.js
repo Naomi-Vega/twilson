@@ -4,7 +4,7 @@ const StyledUserTwoots = styled.section`
   article {
     border: 2px solid black;
     padding: 0px 20px;
-    margin: 32px;
+    margin: 40px 56px;
     &:hover {
       box-shadow: 3px 3px grey;;
     }
@@ -36,6 +36,7 @@ const StyledUserTwoots = styled.section`
   .twoot-timeframe {
     color: gray;
     display: flex;
+    font-size: 14px;
 
     p, .twoot-button {
       width: 50%;

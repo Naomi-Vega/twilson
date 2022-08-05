@@ -51,7 +51,7 @@ const StyledUserSelector = styled.section`
     cursor: pointer;
     fill: white;
     &:hover {
-      fill: #C2C2C2;
+      fill: #4d4d4d;
     }
   }
 
