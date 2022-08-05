@@ -9,7 +9,7 @@ function App() {
     <StyledApp>
       <header>
         <h2>Twootr</h2>
-        <p>Write a new Twoot</p>
+        <p className="twoot-anchor">Write a new Twoot</p>
       </header>
 
       <UserSelector />

@@ -5,6 +5,8 @@ const StyledUserTwoots = styled.section`
     border: 2px solid black;
     padding: 0px 20px;
     margin: 32px;
+    box-shadow: 5px 5px grey;
+
   }
 
   .twoot-user {
@@ -35,7 +37,12 @@ const StyledUserTwoots = styled.section`
     }
 
     .twoot-button {
+      display: flex;
       text-align: right;
+      justify-content: flex-end;
+      gap: 8px;
+      padding-top: 16px;
+        
     }
 
   }
