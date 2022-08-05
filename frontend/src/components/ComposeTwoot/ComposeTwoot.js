@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import StyledComposeTwoot from './StyleComposeTwoot';
 
 const ComposeTwoot = (props) => {
+    const { composerRef } = props;
     const { userName, setDataIsOutdated } = props;
     const [charsCount, setCharsCount] = useState(140);
     const [text, setText] = useState('');
@@ -47,9 +48,10 @@ const ComposeTwoot = (props) => {
                         type="text"
                         placeholder="What are you humming about?"
                         value={text}
+                        ref={composerRef}
                     />
 
-                    <div class="composer-button-container">
+                    <div className="composer-button-container">
                         <div className="composer-button">
                             <button disabled={isDisabled} className={(isDisabled || !text) ? 'disabled' : ''}>
                                 Twoot
