@@ -71,8 +71,6 @@ As a user,
 I want to see how many days ago a twoot was posted
 So that I can easily know when how old it is.
 
-
-
 # Data Structure
 
 ```js
@@ -86,34 +84,10 @@ newTwoot: {
 }
 ```
 
-# HTML Structure
-
-- body
-  - header
-    - h1 title
-  - main
-    - section account
-      - form new account
-    - section transaction
-      - form new transaction
-        - form new category
-    - section account summary
-    - section transactions list
-      - div filter
-      - table
-
 # Component Structure
 
 - App
-  - Header
-  - Main (accounts, transactions)
-    - Account
-    - Transaction
-      - Category (categories)
-    - Account Summary
-    - Transactions List
-      - Filter
-      - Table
-        - TableRow
-
-# Data Map
+  - UserSelector
+  - ComposeTwoot
+  - UserTwoots
+    - Twoots
