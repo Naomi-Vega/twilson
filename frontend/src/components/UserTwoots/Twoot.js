@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FlagFill, ArrowRepeat, HeartFill } from 'react-bootstrap-icons';
+import { FlagFill, SendFill, HeartFill } from 'react-bootstrap-icons';
 
 function Twoot(props){
 
@@ -32,7 +32,7 @@ function Twoot(props){
             <p>{daysAgo(props.twilson.dateAdded)}</p>
             <div className="twoot-button">
                 <FlagFill onClick={() => setFlagColor('red')} color={flagColor} size={20} />
-                <ArrowRepeat onClick={() => setRetwootColor('red')} color={retwootColor} size={20} />
+                <SendFill onClick={() => setRetwootColor('red')} color={retwootColor} size={20} />
                 <HeartFill onClick={() => setLikeColor('red')} color={likeColor} size={20} />
             </div>
         </div>

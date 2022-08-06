@@ -50,6 +50,8 @@ const StyledUserSelector = styled.section`
   .edit-btn {
     cursor: pointer;
     fill: white;
+    transition: all 0.2s ease-in-out;
+    padding-left: 5px;
     &:hover {
       fill: #4d4d4d;
     }

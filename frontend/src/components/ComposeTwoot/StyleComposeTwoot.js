@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledComposeTwoot = styled.section`
-    padding: 30px 70px;
+    padding: 30px 70px 0 70px;
 
     h2 {
       color: #3e4144;
@@ -16,6 +16,7 @@ const StyledComposeTwoot = styled.section`
       border-radius: 5px;
       padding: 5px 20px;
       text-decoration: solid;
+      transition: all 0.1s ease-in-out;
       cursor: pointer;
     }
 
@@ -25,13 +26,13 @@ const StyledComposeTwoot = styled.section`
     }
 
     button:hover {
-      opacity: 0.9;
+      opacity: 0.8;
     }
 
     textarea {
       width: 100%;
       border: none;
-      padding-top: 15px;
+      padding-top: 20px;
       border-bottom: 1px solid black;
     }
 

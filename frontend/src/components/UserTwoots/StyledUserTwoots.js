@@ -3,10 +3,12 @@ import styled from 'styled-components';
 const StyledUserTwoots = styled.section`
   article {
     border: 2px solid black;
-    padding: 0px 20px;
+    padding: 10px 20px;
     margin: 40px 56px;
+    transition: all 0.1s ease-in-out;
     &:hover {
-      box-shadow: 3px 3px grey;;
+      box-shadow: 3px 3px grey;
+      
     }
   }
 
@@ -26,6 +28,10 @@ const StyledUserTwoots = styled.section`
     .user-address {
       text-align: right;
       flex-grow: 1;
+
+      p {
+        color: grey;
+      }
     }
   }
 
