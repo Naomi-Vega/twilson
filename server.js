@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
+import { restart } from 'nodemon';
 
 const app = express();
 app.use(cors());
@@ -17,8 +18,8 @@ let twoots = [];
 
 app.use(express.static('/frontend/build'))
 
-app.get('/', () => {
-  return 'Hello : )';
+app.get('/', (_req, res) => {
+  res.send('<h1>Hello</h1>')
 })
 
 app.get('/twoots', (req, res) => {
