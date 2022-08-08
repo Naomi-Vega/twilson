@@ -17,6 +17,10 @@ let twoots = [];
 
 app.use(express.static('/frontend/build'))
 
+app.get('/', () => {
+  return 'Hello : )';
+})
+
 app.get('/twoots', (req, res) => {
   axios
     .get('https://quotable.io/quotes?page=1&maxLength=140')
