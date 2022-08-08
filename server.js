@@ -15,7 +15,7 @@ app.listen(port, () => {
 
 let twoots = [];
 
-app.use(express.static('frontend/build'))
+app.use(express.static('/frontend/build'))
 
 app.get('/twoots', (req, res) => {
   axios
