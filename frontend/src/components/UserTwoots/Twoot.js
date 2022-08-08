@@ -9,7 +9,7 @@ function Twoot(props){
 
     function daysAgo(dateAdded){
         const timeDiff = new Date().getTime() - new Date(dateAdded).getTime();
-        const days = Math.round(timeDiff / 1000 / 60 / 60 / 24);
+        const days = Math.floor(timeDiff / 1000 / 60 / 60 / 24);
         if (days === 0) {
             return 'Posted today';
         }
