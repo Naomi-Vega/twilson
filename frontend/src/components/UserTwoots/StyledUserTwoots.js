@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const StyledUserTwoots = styled.section`
   article {
     border: 2px solid black;
+    border-radius: 8px;
     padding: 10px 20px;
     margin: 40px 56px;
     transition: all 0.1s ease-in-out;
