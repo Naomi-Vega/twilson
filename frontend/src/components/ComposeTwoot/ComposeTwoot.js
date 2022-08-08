@@ -23,7 +23,7 @@ const ComposeTwoot = (props) => {
         };
 
         axios
-            .post("http://localhost:8080/twoot", { newTwoot })
+            .post("/twoot", { newTwoot })
             .then((res) => {
                 setCharsCount(140);
                 setText('');

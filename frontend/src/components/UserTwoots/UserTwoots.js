@@ -11,7 +11,7 @@ function UserTwoots(props) {
  
     useEffect(() => {
         if (dataIsOutdated) {
-            const url='http://localhost:8080/twoots';
+            const url='/twoots';
             axios.get(url).then((response) => {
                 setTwoots(response.data);
             })
