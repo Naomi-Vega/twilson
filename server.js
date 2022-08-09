@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import { restart } from 'nodemon';
 
 const app = express();
 app.use(cors());
