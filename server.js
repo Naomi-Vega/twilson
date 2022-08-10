@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static('docs'));
+app.use(express.static('frontend/build'));
 app.use(express.urlencoded({ extended: false }));
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
@@ -14,12 +14,6 @@ app.listen(port, () => {
 });
 
 let twoots = [];
-
-app.use(express.static('/frontend/build'))
-
-app.get('/', (_req, res) => {
-  res.send('<h1>Hello</h1>')
-})
 
 app.get('/twoots', (req, res) => {
   axios
